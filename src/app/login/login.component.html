@@ -2,7 +2,7 @@
   <table class="example-full-width" cellspacing="0">
     <tr>
       <td>
-        <input placeholder="Username" [(ngModel)]="username" name="username" required>
+        <input nbInput fullWidth shape="round" placeholder="Username" [(ngModel)]="username" name="username" required>
       </td>
     </tr>
     <tr>
@@ -11,7 +11,7 @@
     </tr>
   </table>
 </form>
-<button (click)="login()" color="primary">Login</button>
+<button nbButton hero status="primary" (click)="login()">Login</button>
 <a [routerLink]="['/registration']">
   Register
 </a>
