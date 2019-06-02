@@ -1,0 +1,25 @@
+<form class="example-form">
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <input nbInput fullWidth shape="round" placeholder="firstName" [(ngModel)]="name" name="name" required>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input placeholder="lastName" [(ngModel)]="lastName" type="lastName" name="lastName" required></td>
+    </tr>
+    <tr>
+      <td>
+        <input placeholder="Email" [(ngModel)]="Email" type="Email" name="Email" required></td>
+    </tr>
+    <tr>
+      <td>
+        <input placeholder="Mobile" [(ngModel)]="Mobile" type="Mobile" name="Mobile" required></td>
+    </tr>
+  </table>
+</form>
+<button nbButton hero status="primary" (click)="signIn()">signIn</button>
+<a [routerLink]="['/login']">
+  Login
+</a>
