@@ -14,10 +14,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   login(): void {
-    if (this.username == 'admin' && this.password == 'admin') {
-      this.router.navigate(["registration"]);
+    if (this.username === 'admin' && this.password === 'admin') {
+      this.router.navigate(['sidebar']);
     } else {
-      alert("Invalid credentials");
+      alert('Invalid credentials');
     }
   }
 }
