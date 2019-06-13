@@ -6,28 +6,31 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router'; // we also need angular router for Nebular to function properly
 import { NbThemeModule } from '@nebular/theme';
-import { NbSidebarModule, NbLayoutModule, NbSidebarService } from '@nebular/theme';
+import { NbSidebarModule, NbLayoutModule, NbSidebarService, NbCardModule } from '@nebular/theme';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrationComponent } from './registration/registration.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { CustomerService} from './customer.service';
-import { LoginService} from './login.service';
-import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './card/card.component';
+import { ForgotpassComponent } from './forgotpass/forgotpass.component';
+import {CustomerService} from './customer.service';
+import {LoginService} from '../app/login/login.service';
 import { HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    SidebarComponent
+    SidebarComponent,
+    CardComponent,
+    ForgotpassComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
 // tslint:disable-next-line: deprecation
     HttpModule,
     NbThemeModule.forRoot(),
@@ -35,7 +38,8 @@ import { HttpModule } from '@angular/http';
     NbSidebarModule,
     NbLayoutModule,
     BrowserAnimationsModule,
-    NbLayoutModule
+    NbLayoutModule,
+    NbCardModule
   ],
   providers: [NbSidebarService, CustomerService, LoginService],
   bootstrap: [AppComponent]

@@ -1,17 +1,33 @@
-<form class="example-form">
+<div class="row">
+  <div class="col-md-4"></div>
+  <div style="padding:20px;" class="col-md-4 center">
+  <form class="example-form">
   <table class="example-full-width" cellspacing="0">
-    <tr>
-      <td>
-        <input nbInput fullWidth shape="round" placeholder="username" [(ngModel)]="username" name="username" required>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input nbInput fullWidth shape="round" type="password" placeholder="Password" [(ngModel)]="password" name="password" required></td>
-    </tr>
+  <tr>
+  <td>
+  <input class="form-group" type="text" placeholder="Username" [(ngModel)]="username" name="username" >
+
+  </td>
+  </tr><br>
+  <tr>
+  <td>
+  <input class="form-group" placeholder="Password" [(ngModel)]="password" type="password" name="password" >
+
+  </td>
+  </tr>
   </table>
-</form>
-<button nbButton hero status="primary" (click)="login()">Login</button>
-<a [routerLink]="['/registration']">
+
+  <div style="padding-left:50px;">
+  <a [routerLink]="['/forgotpassword']"> Forgot Password</a><br>
+  </div><br>
+  <div style="padding-left:20px;">
+  <button nbButton hero status="primary" (click)="login();">Login</button>
+
+  </div>
+  </form>
+
+  <!-- <a [routerLink]="['/registration']">
   Register
-</a>
+  </a>-->
+  </div>
+  </div>

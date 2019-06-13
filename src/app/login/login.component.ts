@@ -22,7 +22,12 @@ customer: Login[];
     this.username = '';
     this.password = '';
    }
+
+
+
   ngOnInit() {
+
+
   }
  login() {
   const data = {
@@ -36,5 +41,6 @@ customer: Login[];
 
     });
  }
+
 }
 
