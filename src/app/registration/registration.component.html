@@ -1,26 +1,26 @@
 
 <div class="row">
     <div class="col-md-4"></div>
-      <div style="padding:20px;background-color:#4ca6ff52;" class="col-md-4">
+      <div style="padding:20px;" class="col-md-4">
     <form class="example-form">
       <table class="example-full-width" cellspacing="0">
         <tr>
           <td>
             <input nbInput fullWidth shape="round" placeholder="firstName" [(ngModel)]="name" name="name" required>
           </td>
-        </tr>
+        </tr><br>
         <tr>
           <td>
             <input placeholder="lastName" [(ngModel)]="lastName" type="lastName" name="lastName" required></td>
-        </tr>
+        </tr><br>
         <tr>
           <td>
             <input placeholder="Email" [(ngModel)]="Email" type="Email" name="Email" required></td>
-        </tr>
+        </tr><br>
         <tr>
           <td>
             <input placeholder="Mobile" [(ngModel)]="Mobile" type="Mobile" name="Mobile" required></td>
-        </tr>
+        </tr><br>
       </table>
     </form>
     <button nbButton hero status="primary" (click)="signIn()">signIn</button>

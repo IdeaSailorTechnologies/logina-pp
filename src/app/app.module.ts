@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrationComponent } from './registration/registration.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CardComponent } from './card/card.component';
+import { ForgotpassComponent } from './forgotpass/forgotpass.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CardComponent } from './card/card.component';
     LoginComponent,
     RegistrationComponent,
     SidebarComponent,
-    CardComponent
+    CardComponent,
+    ForgotpassComponent
   ],
   imports: [
     BrowserModule,

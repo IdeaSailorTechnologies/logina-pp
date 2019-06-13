@@ -1,22 +1,37 @@
 <div class="row">
-  <div class="col-md-4"></div>
-    <div style="padding:20px;background-color:#4ca6ff52;" class="col-md-4">
-    <form class="example-form">
+  <!-- <div class="col-md-4"></div> -->
+    <!-- <div style="padding:20px;" class="col-md-4 center"> -->
+    <form class="example-form" [formGroup]="registerForm" >
       <table class="example-full-width" cellspacing="0">
         <tr>
           <td>
-            <input nbInput fullWidth shape="round" placeholder="Username" [(ngModel)]="username" name="username" required>
+            <input nbInput fullWidth shape="round" placeholder="Username" formControlName="username" [(ngModel)]="username" name="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" >
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+              <div *ngIf="f.username.errors.required">username is required</div>
+          </div>
           </td>
-        </tr>
+        </tr><br>
         <tr>
           <td>
-            <input nbInput fullWidth shape="round" placeholder="Password" [(ngModel)]="password" type="password" name="password" required></td>
-        </tr>
-      </table>
-    </form>
-    <button nbButton hero status="primary" (click)="login()">Login</button>
-    <a [routerLink]="['/registration']">
+            <input nbInput fullWidth shape="round" placeholder="Password" formControlName="password" [(ngModel)]="password" type="password" name="password"  [ngClass]="{ 'is-invalid': submitted && f.password.errors }" >
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">firstName is required</div>
+          </div></td>
+        </tr><br>
+       </table>
+   
+    <div style="padding-left:50px;">
+        <a [routerLink]="['/forgotpassword']"> Forgot Password</a><br>
+    </div><br>
+    <div style="padding-left:20px;">
+      <button nbButton hero status="primary" (click)="login()">Login</button>
+    
+    </div>
+  </form>
+   
+   <!-- <a [routerLink]="['/registration']">
       Register
-    </a>
-  </div>
+    </a>-->
+  <!-- </div> -->
 </div>
+
