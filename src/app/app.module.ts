@@ -10,6 +10,10 @@ import { NbSidebarModule, NbLayoutModule, NbSidebarService } from '@nebular/them
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrationComponent } from './registration/registration.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CustomerService} from './customer.service';
+import { LoginService} from './login.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     FormsModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+// tslint:disable-next-line: deprecation
+    HttpModule,
     NbThemeModule.forRoot(),
     RouterModule,
     NbSidebarModule,
@@ -30,7 +37,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     BrowserAnimationsModule,
     NbLayoutModule
   ],
-  providers: [NbSidebarService],
+  providers: [NbSidebarService, CustomerService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

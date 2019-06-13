@@ -2,16 +2,20 @@
   <table class="example-full-width" cellspacing="0">
     <tr>
       <td>
-        <input nbInput fullWidth shape="round" placeholder="firstName" [(ngModel)]="name" name="name" required>
+        <input nbInput fullWidth shape="round" placeholder="firstName" [(ngModel)]="firstName" name="firstName" required>
       </td>
     </tr>
     <tr>
       <td>
-        <input placeholder="lastName" [(ngModel)]="lastName" type="lastName" name="lastName" required></td>
+        <input placeholder="lastName" [(ngModel)]="LastName" type="lastName" name="lastName" required></td>
     </tr>
     <tr>
       <td>
         <input placeholder="Email" [(ngModel)]="Email" type="Email" name="Email" required></td>
+    </tr>
+    <tr>
+      <td>
+        <input placeholder="password" [(ngModel)]="Password" type="password" name="password" required></td>
     </tr>
     <tr>
       <td>
@@ -23,3 +27,4 @@
 <a [routerLink]="['/login']">
   Login
 </a>
+
