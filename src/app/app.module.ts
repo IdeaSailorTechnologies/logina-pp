@@ -24,7 +24,7 @@ import { ForgotpassComponent } from './forgotpass/forgotpass.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+   
     AppRoutingModule,
     FormsModule,
     NbThemeModule.forRoot(),
