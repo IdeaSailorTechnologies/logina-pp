@@ -3,7 +3,7 @@ id: string;
 companyName: string;
 emailAddress: string;
 lastName: string;
-password : string;
+password: string;
 mobile: string;
 
 }

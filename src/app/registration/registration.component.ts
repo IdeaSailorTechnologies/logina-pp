@@ -22,10 +22,10 @@ export class RegistrationComponent implements OnInit {
   constructor(private CustomerService: CustomerService) {
 
   this.firstName = '';
-    this.LastName = '';
-    this.Email = '';
-   this.Password = '';
-    this.Mobile ='';
+  this.LastName = '';
+  this.Email = '';
+  this.Password = '';
+  this.Mobile = '';
   }
 
   ngOnInit() {
@@ -35,7 +35,7 @@ export class RegistrationComponent implements OnInit {
   signIn() {
     // this.CustomerService.addCustomer(newCustomer)
     // .subscribe(Customer);
-    var data = {
+    const data = {
       companyName: this.firstName, emailAddress: this.Email, lastName : this.LastName, password : this.Password, mobile: this.Mobile
     };
     console.log(data);
